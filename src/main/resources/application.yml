@@ -1,1 +1,26 @@
 
+logging:
+  level:
+    ROOT: WARN
+    org,springframework,security: DEBUG
+    com.microsoft: DEBUG
+    com.example: DEBUG
+
+azure:
+  activedirectory:
+    tenant-id: 76211efd-e535-4d1b-8668-b96614811efe
+    active-directory-groups: group1, group2
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    username: root
+    password: ${DATABASE_PASSWORD}
+  security:
+    oauth2:
+      client:
+        registration:
+          azure:
+            client-id: ${AD_CLIENT_ID}
+            client-secret: ${AD_CLIENT_SECRET}
+
