@@ -1,11 +1,4 @@
 
-logging:
-  level:
-    ROOT: WARN
-    org,springframework,security: DEBUG
-    com.microsoft: DEBUG
-    com.example: DEBUG
-
 azure:
   activedirectory:
     tenant-id: 76211efd-e535-4d1b-8668-b96614811efe
